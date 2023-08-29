@@ -7,6 +7,6 @@ This is a H and M Ecommerece recommendation app. Select your user Id and the sys
 - Collaberative filtering recommendations 
 
 ## Example
-![site page 1](./input/images/Screenshot1.jpf) 
-![site page 2](./input/images/Screenshot2.jpf) 
-![site page 3](./input/images/Screenshot3.jpf) 
+![site page 1](./input/images/Screenshot1.jpg) 
+![site page 2](./input/images/Screenshot2.jpg) 
+![site page 3](./input/images/Screenshot3.jpg) 
