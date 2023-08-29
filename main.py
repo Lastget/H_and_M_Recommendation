@@ -15,13 +15,15 @@ def str_to_list(s):
 st.set_page_config(page_title='Recommend Clothes', layout="wide", page_icon = "🛍️")
 
 # Import preprocessed data
-most_buy_df = pd.read_csv("./output/customer_most_bought.csv" , dtype={'article_id': str})
+# most_buy_df = pd.read_csv("./output/customer_most_bought.csv" , dtype={'article_id': str})
 with open('./output/pairs.pkl', 'rb') as file:
     paris_dict = pickle.load(file)
 top12_arr = np.load('./output/top12.npy', allow_pickle=True)
-last_purchase_df =  pd.read_csv("./output/last_purchase.csv", dtype={'last_purchase': str})
-col_f_df = pd.read_csv("./output/cofilter.csv", dtype={'customer_id': str}, converters={'prediction': str_to_list})
-
+most_buy_df = pd.read_pickle('output/most_bought.pkl', compression='bz2')
+last_purchase_df = pd.read_pickle('output/last_purchase.pkl', compression='bz2')
+col_f_df = pd.read_pickle('output/cofilter.pkl', compression='bz2')
+# last_purchase_df =  pd.read_csv("./output/last_purchase.csv", dtype={'last_purchase': str})
+# col_f_df = pd.read_csv("./output/cofilter.csv", dtype={'customer_id': str}, converters={'prediction': str_to_list})
 
 # Title
 st.write("# H&M E-Commerce Recommendation System 🛍️")
